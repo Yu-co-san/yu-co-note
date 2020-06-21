@@ -6,20 +6,22 @@ import { rgba } from "polished"
 =============================================== */
 export const colors = {}
 
-colors.background = "#feffff"
-colors.text = "#17252A"
+// colors.background = "#feffff"
+colors.background = "#fcf8fb"
+// colors.text = "#17252A"
+colors.text = "#423e3f"
 
-colors.paleGray = "#f9f9f9"
-colors.lightGray = "#ddd"
-colors.gray = "#96acb3"
-colors.primaryGray = "#627E8C"
+colors.paleGray = "#f5ebf1"
+colors.lightGray = "#cec1c2"
+colors.gray = "#cec1c2"
+colors.primaryGray = "#7d6769"
 
-colors.primaryPurple = "#2B7A78"
-colors.primary = "#3AAFA9"
-colors.primaryLight = rgba("#3AAFA9", 0.15)
-colors.primaryPale = rgba("#3AAFA9", 0.07)
+colors.primaryPurple = "#E4C2c1"
+colors.primary = "#B6666F"
+colors.primaryLight = rgba("#B6666F", 0.15)
+colors.primaryPale = rgba("#B6666F", 0.07)
 
-colors.secondary = "#2B7A78"
+colors.secondary = "#F53163"
 colors.danger = "#FF5C55"
 colors.success = "#4FCE7A"
 colors.warn = "#feaa2e"

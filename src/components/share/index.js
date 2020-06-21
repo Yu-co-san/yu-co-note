@@ -75,7 +75,7 @@ const Share = props => {
     <StaticQuery
       query={graphql`
         query AuthorQuery {
-          avatar: file(absolutePath: { regex: "/moai_icon_grayed.png/" }) {
+          avatar: file(absolutePath: { regex: "/dinosaur-icon.png/" }) {
             childImageSharp {
               fixed(width: 40, height: 40) {
                 ...GatsbyImageSharpFixed

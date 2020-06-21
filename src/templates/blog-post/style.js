@@ -68,8 +68,8 @@ const Wrapper = styled.div`
           content: "";
           background: linear-gradient(
             45deg,
-            #3AAFA9 0%, 
-            #2B7A78 74%
+            #efb7ba 0%, 
+            #cbd5f0 74%
           );
           width: 100%;
           height: 2px;
@@ -106,7 +106,7 @@ const Wrapper = styled.div`
           content: "";
           width: 3px;
           height: 100%;
-          background: linear-gradient(180deg, #2B7A78 0%, #17252A 74%);
+          background: linear-gradient(180deg, #cbd5f0 0%, #efb7ba 74%);
           position: absolute;
           left: 0;
           top: 0;

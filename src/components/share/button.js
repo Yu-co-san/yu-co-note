@@ -34,25 +34,25 @@ const Wrapper = styled.div`
     }
   }
   &.twitter {
-    background: linear-gradient(0deg, #3AAFA9, ${rgba("#3AAFA9", 0.7)});
+    background: linear-gradient(0deg, #B6666F, ${rgba("#B6666F", 0.7)});
     text-shadow: 0 1px 1px #3AAFA9;
     // box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.1),
     //   0 2px 10px -1px ${rgba("#3AAFA9", 0.6)};
   }
   &.facebook {
-    background: linear-gradient(0deg, #3AAFA9, ${rgba("#3AAFA9", 0.8)});
+    background: linear-gradient(0deg, #B6666F, ${rgba("#B6666F", 0.8)});
     text-shadow: 0 1px 1px #3AAFA9;
     // box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.1),
     //   0 2px 10px -1px ${rgba("#3AAFA9", 0.6)};
   }
   &.hatena {
-    background: linear-gradient(0deg, #3AAFA9, ${rgba("#3AAFA9", 0.8)});
+    background: linear-gradient(0deg, #B6666F, ${rgba("#B6666F", 0.8)});
     text-shadow: 0 1px 1px #3AAFA9;
     // box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.1),
     //   0 2px 10px -1px ${rgba("#3AAFA9", 0.6)};
   }
   &.pocket {
-    background: linear-gradient(0deg, #3AAFA9, ${rgba("#3AAFA9", 0.7)});
+    background: linear-gradient(0deg, #B6666F, ${rgba("#B6666F", 0.7)});
     text-shadow: 0 1px 1px #3AAFA9;
     // box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.1),
     //   0 2px 10px -1px ${rgba("#3AAFA9", 0.6)};

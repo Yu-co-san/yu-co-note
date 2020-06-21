@@ -48,7 +48,7 @@ const Wrapper = styled.header`
       transition: 0.3s ease-in-out;
       width: 100%;
       height: 5px;
-      background: linear-gradient(45deg, #3AAFA9 0%, #2B7A78 74%);
+      background: linear-gradient(45deg, #efb7ba 0%, #cbd5f0 74%);
       position: absolute;
       left: 0;
       top: 0;

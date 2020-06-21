@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Ma-r-co note`,
-    author: `Ma-r-co`,
-    description: `競技プログラミング, Python, React, Fintechについての技術ブログです.`,
-    siteUrl: `https://marco-note.net`,
+    title: `Yu-co note`,
+    author: `Yu-co`,
+    description: `London生活・ショップ・料理・ダイエットのブログ`,
+    siteUrl: `https://yuco-note.com#TODO`,
     social: {
-      twitter: `marco_marticus`,
-      github: `Ma-r-co`,
+      twitter: `#TODO`,
+      github: `#TODO`,
     },
-    siteRecaptchaKey: '6LdGn6IZAAAAALP1ZCquqx_vOw64Di7ghraKV5dJ',
+    siteRecaptchaKey: '#TODO',
   },
   plugins: [
     {
@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://marco-note.net`,
+        siteUrl: `https://yuco-note.com#TODO`,
       },
     },
     {
@@ -122,7 +122,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-74763445-2",
+        trackingId: "#TODO",
       },
     },
     {
@@ -186,13 +186,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ma-r-co note`,
-        short_name: `Ma-r-co note`,
+        name: `Yu-ko note`,
+        short_name: `Yu-ko note`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#3AAFA9`,
         display: `minimal-ui`,
-        icon: `${__dirname}/src/images/moai_icon_grayed.png`,
+        icon: `${__dirname}/src/images/dinosaur-icon.png`,
       },
     },
     `gatsby-plugin-twitter`,

@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Blog from "../components/blog"
 import Polygon from "../components/polygon"
-// import Image from "gatsby-image"
+import Image from "gatsby-image"
 
 /* ===============================================
 #  page component
@@ -62,11 +62,11 @@ const BlogIndex = ({ data, location }) => {
       <SEO title={siteTitle} description={siteDescription} />
       <Polygon
         height="400px"
-        background="linear-gradient(45deg, #2B7A78 0%, #17252A 74%)"
+        background="linear-gradient(45deg, #194f92 0%, #efb7ba 74%)"
       />
       <Wrapper>
         <div className="message">
-          {/* <Image fixed={data.avatar.childImageSharp.fixed} alt="author" /> */}
+          <Image fixed={data.avatar.childImageSharp.fixed} alt="author" />
           <h1>{data.site.siteMetadata.title}</h1>
           <p>{data.site.siteMetadata.description}</p>
         </div>
@@ -101,7 +101,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    avatar: file(absolutePath: { regex: "/tony.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/dinosaur-icon.png/" }) {
       childImageSharp {
         fixed(width: 80, height: 80) {
           ...GatsbyImageSharpFixed

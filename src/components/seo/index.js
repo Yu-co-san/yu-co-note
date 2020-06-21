@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import icon from "../../images/moai_icon_grayed.png"
+import icon from "../../images/dinosaur-icon.png"
 
 function SEO({
   description,
