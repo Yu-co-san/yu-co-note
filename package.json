@@ -1,9 +1,9 @@
 {
-  "name": "ma-r-co-note",
+  "name": "yu-co-note",
   "private": true,
   "description": "My blog powered by gatsby",
   "version": "0.1.0",
-  "author": "Ma-r-co",
+  "author": "Yu-co-san",
   "dependencies": {
     "axios": "^0.19.2",
     "gatsby": "^2.23.0",
@@ -47,7 +47,7 @@
   "devDependencies": {
     "prettier": "^2.0.5"
   },
-  "homepage": "https://marco-note.net",
+  "homepage": "https://yuco-note.net",
   "keywords": [
     "gatsby"
   ],
@@ -55,7 +55,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ma-r-co/ma-r-co-note.git"
+    "url": "https://github.com/Yu-co-san/yu-co-note.git"
   },
   "scripts": {
     "build": "gatsby build",

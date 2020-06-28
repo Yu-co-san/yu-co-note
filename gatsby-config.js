@@ -3,7 +3,7 @@ module.exports = {
     title: `Yu-co note`,
     author: `Yu-co`,
     description: `London生活・ショップ・料理・ダイエットのブログ`,
-    siteUrl: `https://yuco-note.com#TODO`,
+    siteUrl: `https://yuco-note.net`,
     social: {
       twitter: `#TODO`,
       github: `#TODO`,
@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://yuco-note.com#TODO`,
+        siteUrl: `https://yuco-note.net`,
       },
     },
     {
@@ -178,7 +178,7 @@ module.exports = {
             }
           `,
             output: "/rss.xml",
-            title: "Ma-r-co RSS Feed",
+            title: "Yuco-note RSS Feed",
           },
         ],
       },
@@ -186,11 +186,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Yu-ko note`,
-        short_name: `Yu-ko note`,
+        name: `Yu-co note`,
+        short_name: `Yu-co note`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#3AAFA9`,
+        background_color: `#fcf8fb`,
+        theme_color: `#B6666F`,
         display: `minimal-ui`,
         icon: `${__dirname}/src/images/dinosaur-icon.png`,
       },
