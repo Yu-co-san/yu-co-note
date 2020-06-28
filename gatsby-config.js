@@ -8,7 +8,7 @@ module.exports = {
       twitter: `#TODO`,
       github: `#TODO`,
     },
-    siteRecaptchaKey: '#TODO',
+    siteRecaptchaKey: '6LcDhqoZAAAAAITsw5yKmHo_iLzSJCcGluefKYFT',
   },
   plugins: [
     {
@@ -122,7 +122,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "#TODO",
+        trackingId: "UA-171102515-1",
       },
     },
     {
