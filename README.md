@@ -1,1 +1,1 @@
-# My gatsby blog
+# My gatsby blog [![Netlify Status](https://api.netlify.com/api/v1/badges/adbaa1f0-74f5-4a3e-ad4c-c1810129958e/deploy-status)](https://app.netlify.com/sites/yuco-note/deploys)
