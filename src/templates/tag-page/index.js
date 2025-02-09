@@ -47,34 +47,32 @@ const TagPageTemplate = ({ data, location, pageContext }) => {
 
 export default TagPageTemplate
 
-export const pageQuery = graphql`
-  query($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        description
-      }
+export const pageQuery = graphql`query ($slug: String!) {
+  site {
+    siteMetadata {
+      title
+      description
     }
-    allMarkdownRemark(
-      filter: { frontmatter: { tags: { in: [$slug] } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "YYYY-MM-DD")
-            title
-            description
-            tags
-            slug
-          }
+  }
+  allMarkdownRemark(
+    filter: {frontmatter: {tags: {in: [$slug]}}}
+    sort: {frontmatter: {date: DESC}}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "YYYY-MM-DD")
+          title
+          description
+          tags
+          slug
         }
       }
     }
   }
-`
+}`

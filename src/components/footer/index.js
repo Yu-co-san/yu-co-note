@@ -123,10 +123,10 @@ const Footer = () => {
             >
             <Feedly />
           </a>
-          <a href={`${siteUrl}/sitemap.xml`}>
+          <a href={`/sitemap-index.xml`}>
             <FaSitemap />
           </a>
-          <a href={`${siteUrl}/rss.xml`}>
+          <a href={`/rss.xml`}>
             <FaRss />
           </a>
         </div>

@@ -93,40 +93,35 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
+      description
+    }
+  }
+  avatar: file(absolutePath: {regex: "/dinosaur-icon.png/"}) {
+    childImageSharp {
+      fixed(width: 80, height: 80) {
+        ...GatsbyImageSharpFixed
       }
     }
-    avatar: file(absolutePath: { regex: "/dinosaur-icon.png/" }) {
-      childImageSharp {
-        fixed(width: 80, height: 80) {
-          ...GatsbyImageSharpFixed
+  }
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
         }
-      }
-    }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "YYYY-MM-DD")
-            title
-            description
-            tags
-            slug
-          }
+        frontmatter {
+          date(formatString: "YYYY-MM-DD")
+          title
+          description
+          tags
+          slug
         }
       }
     }
   }
-`
+}`

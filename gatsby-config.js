@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: ["/tags/*"],
+        excludes: ["/tags/*"],
       },
     },
     `gatsby-plugin-slug`,
@@ -157,26 +157,24 @@ module.exports = {
                 })
               })
             },
-            query: `
-            {
-              allMarkdownRemark(
-                sort: { order: DESC, fields: [frontmatter___date] },
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    fields { slug }
-                    frontmatter {
-                      title
-                      date
-                      slug
-                    }
-                  }
-                }
-              }
-            }
-          `,
+            query: `{
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    edges {
+      node {
+        excerpt
+        html
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date
+          slug
+        }
+      }
+    }
+  }
+}`,
             output: "/rss.xml",
             title: "Yuco-note RSS Feed",
           },

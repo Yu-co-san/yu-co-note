@@ -6,29 +6,24 @@ exports.createPages = async ({ graphql, actions }) => {
   const blogPost = path.resolve(`./src/templates/blog-post/index.js`)
   const tagPage = path.resolve(`./src/templates/tag-page/index.js`)
   const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                date(formatString: "YYYY-MM-DD")
-                tags
-                slug
-                keywords
-              }
-            }
-          }
+    `{
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date(formatString: "YYYY-MM-DD")
+          tags
+          slug
+          keywords
         }
       }
-    `
+    }
+  }
+}`
   )
 
   if (result.errors) {
