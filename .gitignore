@@ -76,3 +76,4 @@ _draft/
 
 # Keys in dev env
 src/config/dev.js
+src/gatsby-types.d.ts

@@ -1,16 +1,17 @@
 {
   "name": "yu-co-note",
   "private": true,
-  "description": "My blog powered by gatsby",
+  "description": "Yet another blog produced by Yu-co",
   "version": "0.2.0",
   "author": "Yu-co-san",
   "dependencies": {
     "axios": "^1.7.9",
     "gatsby": "^5.14.1",
-    "gatsby-image": "^3.11.0",
     "gatsby-plugin-canonical-urls": "^5.14.0",
     "gatsby-plugin-feed": "^5.14.0",
     "gatsby-plugin-google-analytics": "^5.14.0",
+    "gatsby-plugin-google-gtag": "^5.14.0",
+    "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-manifest": "^5.14.0",
     "gatsby-plugin-offline": "^6.14.0",
     "gatsby-plugin-react-helmet": "^6.14.0",
@@ -41,29 +42,32 @@
     "react-google-recaptcha": "^3.1.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.4.0",
+    "rehype-react": "^8.0.0",
     "smooth-scroll": "^16.1.3",
     "styled-components": "^6.1.15"
   },
   "devDependencies": {
-    "prettier": "^3.4.2"
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3"
   },
   "homepage": "https://yuco-note.net",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
     "url": "https://github.com/Yu-co-san/yu-co-note.git"
   },
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "rm -rf .cache && npm run develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "clean": "rm -rf .cache"
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
   }
 }
