@@ -12,16 +12,10 @@ import Wrapper from "./style";
 import { AdsenseAuto, AdsenseHori } from "../../components/googleAdsense";
 import type { RelatedPost, LatestPost, Post } from "../../types/Post";
 
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: {
-    "adsense": AdsenseHori,
-  },
-}).Compiler;
-
 interface BlogPostTemplateProps {
   data: Queries.BlogPostBySlugQuery;
   location: PageProps["location"];
+  path: PageProps["path"]
   pageContext: {
     slug: string;
     relatedPosts: RelatedPost[];
@@ -34,6 +28,7 @@ interface BlogPostTemplateProps {
 const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
   data,
   location,
+  path,
   pageContext,
 }) => {
   const post = data.markdownRemark!;
@@ -50,7 +45,8 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
             <Tags tags={Array.from(post.frontmatter!.tags!)} />
           </div>
           <Toc data={data.markdownRemark?.tableOfContents || ""} />
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <AdsenseHori currentPath={path}/>
+          <section dangerouslySetInnerHTML={{ __html: post.html! }} />
           {/* <section>{renderAst(post.htmlAst)}</section> */}
           <Share
             title={post.frontmatter?.title || ""}

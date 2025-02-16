@@ -82,7 +82,7 @@ const Share: React.FC<ShareProps> = (props) => {
         query AuthorQuery {
           avatar: file(absolutePath: { regex: "/dinosaur-icon.png/" }) {
             childImageSharp {
-              gatsbyImageData(layout: FIXED, width: 40, height: 40)  # Todo: センター寄せ
+              gatsbyImageData(layout: FIXED, width: 40, height: 40)
             }
           }
         }

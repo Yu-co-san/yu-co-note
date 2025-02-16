@@ -114,7 +114,14 @@ const config: GatsbyConfig = {
       `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
+            serialize: ({
+              query: { site, allMarkdownRemark },
+            }: {
+              query: {
+                site: Queries.Site
+                allMarkdownRemark: Queries.Query["allMarkdownRemark"]
+              }
+            }) => {
               return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,

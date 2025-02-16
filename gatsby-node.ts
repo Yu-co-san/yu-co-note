@@ -1,14 +1,52 @@
 import path from "path";
 import { GatsbyNode } from "gatsby";
 import { extractRelatedPosts, defaultConfig } from "./gatsby-related-post";
-import { LatestPost, Post } from "./src/types/Post";
+import { LatestPost } from "./src/types/Post";
 import BlogPostTemplate from "./src/templates/blog-post/";
 
-// interface CreatePagesQuery {
-//   allMarkdownRemark: {
-//     edges: Post[];
-//   };
-// }
+
+export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] = ({ actions }) => {
+  actions.createTypes(`
+    type Site {
+      siteMetadata: SiteMetadata!
+    }
+
+    type SiteMetadata {
+      title: String!
+      description: String!
+      image: String!
+      author: String!
+      siteUrl: String!
+      social: Social!
+      siteRecaptchaKey: String!
+      adsense: Adsense!
+    }
+
+    type Social {
+        twitter: String!
+        github: String!
+      }
+
+    type Adsense {
+        clientKey: String!
+        slot1: String!
+    }
+
+    type MarkdownRemark implements Node {
+      fields: MarkdownRemarkFields!
+      frontmatter: Frontmatter!
+    }
+    type Frontmatter {
+      date: Date! @dateformat
+      slug: String!
+      title: String!
+      tags: [String!]!
+    }
+    type MarkdownRemarkFields {
+      slug: String!
+    }
+  `)
+}
 
 export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
@@ -53,17 +91,17 @@ export const createPages: GatsbyNode["createPages"] = async ({
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
     // 最新記事 //
-    const latestPosts_temp: LatestPost[] = [];
+    const latestPosts_temp: LatestPost[]= [];
     posts.map((e) => {
       // 自分を除外 //
-      if (e.node.frontmatter?.slug !== post.node.frontmatter?.slug) {
+      if (e.node.frontmatter.slug !== post.node.frontmatter.slug) {
         const frontmatter = e.node.frontmatter;
         const temp: LatestPost = {
           title: frontmatter?.title || '',
           slug: frontmatter?.slug || '',
           date: frontmatter?.date || '',
         };
-        latestPosts_temp.push(temp);
+        latestPosts_temp.push(frontmatter);
       }
     });
     const latestPosts: LatestPost[] = latestPosts_temp.slice(0, 5);

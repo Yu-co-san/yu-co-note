@@ -1,4 +1,4 @@
-import { Post, RelatedPost } from "./src/types/Post";
+import { RelatedPost } from "./src/types/Post";
 
 type RelatedPostsConfig = {
   keywords: number;
@@ -15,8 +15,8 @@ export const defaultConfig: RelatedPostsConfig = {
 };
 
 export const extractRelatedPosts = (
-  posts: Post[],
-  post: Post,
+  posts: Queries.CreatePagesQuery["allMarkdownRemark"]["edges"],
+  post:  Queries.CreatePagesQuery["allMarkdownRemark"]["edges"][number],
   config: RelatedPostsConfig
 ) => {
   const tags = post.node.frontmatter.tags;

@@ -75,7 +75,7 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data, location }) => {
       />
       <Wrapper>
         <div className="message">
-          <GatsbyImage image={data.avatar.childImageSharp.gatsbyImageData} alt="author" />
+          <GatsbyImage image={data.avatar?.childImageSharp?.gatsbyImageData!} alt="author" />
           <h1>{title}</h1>
           <p>{description}</p>
         </div>
@@ -127,7 +127,7 @@ export const pageQuery = graphql`
     }
     avatar: file(absolutePath: { regex: "/dinosaur-icon.png/" }) {
       childImageSharp {
-        gatsbyImageData(layout: FIXED, width: 80, height: 80)  # Todo: センター寄せ
+        gatsbyImageData(layout: FIXED, width: 80, height: 80)
         }
       }
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 1000) {
